@@ -1,5 +1,95 @@
 .hero {
-  min-height: 100vh;
-  padding: 200px 0;
   background-color: $secondary;
+  position: relative;
+  min-height: 100vh;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../images/backgrounds/hero-bg.jpg');
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    opacity: .5;
+
+    @include lg {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    padding-top: 230px;
+    padding-bottom: 200px;
+  }
+
+  &__content {
+    margin-left: auto;
+    color: $light;
+    text-align: center;
+
+    @include lg {
+      text-align: left;
+    }
+  }
+
+  &__title, &__text {
+    text-align: center;
+    
+    @include lg {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: $gap * 2;
+    @include lg {
+      font-size: 3rem;
+    }
+    @include xxl {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: $gap * 2;
+    font-weight: 500;
+    font-size: 1.125rem;
+    @include xxl {
+      font-size: 1.5rem;;
+    }
+  }
+
+  &__wrap-btn {
+    display: inline-block;
+    margin-bottom: 145px;
+  }
+
+  &__partners {
+    justify-content: space-between;
+
+    .partner {
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &__title {
+        margin-bottom: auto;
+        font-size: .75rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+      &__img {
+        margin-top: $gap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 }

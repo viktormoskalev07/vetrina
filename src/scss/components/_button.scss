@@ -1,27 +1,46 @@
-$main-button:green;
-$main-button-hover:rgb(9, 65, 9);
- button{
-   cursor: pointer;
- }
-.button{
-    width: 100%;
-    display: inline-block;
-    padding:10px 25px;
-    background-color: $main-button;
-    border:solid $main-button;
-    font-size: 24px;
-    color:white;
-    border-radius: 4px;
-      cursor: pointer;
-  }
-  
-  .button:hover{
- 
- 
-    background-color: white;
-  }
-  
-  
- 
+.hero__btn {
+  line-height: 1;
+  padding: ($gap * 1.5) ($gap * 4);
+  border-radius: 50rem;
+  font-family: $font-title;
+  font-weight: 700;
+  letter-spacing: .02em;
+  background-color: $dark;
+  display: flex;
+  transition: background-color .4s;
 
 
+  .icons {
+    display: flex;
+    margin-left: 6px;
+    width: 21px;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+
+    &-1, &-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform .4s;
+    }
+    &-2 {
+      transform: translateY(120%);
+    }
+  }
+
+  &:hover {
+    background-color: $accent;
+
+    .icons {
+      &-1 {
+        transform: translateY(-120%);
+      }
+      &-2 {
+        transform: translateY(0);
+      }
+    }
+  }
+}

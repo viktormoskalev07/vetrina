@@ -3,15 +3,20 @@
 --secondary :#AD9EFB;
 --accent: #FB9291;
 --dark: #1C1D32;
+--light: #ffffff;
 } 
 
 $primary :var(--primary);
 $secondary:var(--secondary);
 $accent:var(--accent);
 $dark:var(--dark);
+$light:var(--light);
+$gap: 15px;
 $logowidth:50px;
- 
- 
+
+$font-main: 'Montserrat', sans-serif;
+$font-title: 'Playfair Display', serif;
+
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
