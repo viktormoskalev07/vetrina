@@ -7,6 +7,8 @@ $nav-hover:rgb(170, 81, 81);
 .nav {
     color: white;
     width: 100%;
+    font-family: $font-title;
+    font-weight: 700;
 
     @include nav-desktop {
         width: auto;
@@ -23,46 +25,84 @@ $nav-hover:rgb(170, 81, 81);
         padding: 0;
         margin: 0;
         overflow: hidden;
-
+        gap: $gap + 5px;
         @include nav-desktop {
             display: flex;
             opacity: 1;
+            align-items: center;
             pointer-events: all;
             max-height: 100%;
+            overflow: visible;
         }
     }
 
-    .menu-item {
-        background-color: $nav-bgc;
-        transform: translateX(+100%);
-        margin: 10px 0; 
-        a{
-            padding: 10px 0px;
-            width: 100%;
-            display: block;
+    ul{
+        list-style: none;
+    }
+
+    a{
+        color: $light;
+        text-decoration: none;
+        display: block;
+        margin: 0 auto 15px;
+        &:hover{
+            text-decoration: underline;
         }
-        &:nth-child(2n) {
-            transform: translateX(-100%);
-        } 
-        @include nav-desktop {
-            margin: 0 10px; 
-            a {
-                padding: 15px;
-            } 
-            background-color: transparent;
-            transform: none; 
-            &:nth-child(2n) {
-                transform: none;
+        @include nav-desktop{
+            margin-bottom: 0;
+        }
+    }
+    .sub-menu{
+        padding: 0;
+        @include nav-desktop{
+            display: none;
+            position: absolute;
+            z-index: 2;
+            top: 100%;
+            right: 0;
+            padding: 20px 10px 10px;
+            min-width: 150px;
+            transition: .3s linear;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            .menu-item{
+                text-shadow: 0 0 7px #8c5dfb;
             }
         }
-
-        display: block;
+    }
+    .menu-item{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        position: relative;
+        .menu-item{
+            padding-bottom: 0;
+        }
+        @include nav-desktop{
+            &-has-children{
+                display: inline-flex;
+                align-items: center;
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 7px;
+                    background: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 6L0.803847 0.75L11.1962 0.750001L6 6Z' fill='white'/%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    margin-left: 5px;
+                }
+            }
+            .menu-item{
+                padding-bottom: 10px;
+            }
+        }
         
-        transition: 0.5s;
-
-        &:hover {
-            background-color: $nav-hover;
-            transition: 0.2s;
+    }
+    @include nav-desktop{
+        .menu-item:hover{
+            .sub-menu{
+                display: block;
+            }
         }
     }
 
@@ -70,11 +110,12 @@ $nav-hover:rgb(170, 81, 81);
         background-color: transparent;
         border: none;
         width: 50px;
+        cursor: pointer;
         height: 50px;
         z-index: 10;
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 2px;
         padding: 10px;
         justify-content: center;
         align-items: center;
@@ -87,10 +128,10 @@ $nav-hover:rgb(170, 81, 81);
 
         &__row {
             transition: 0.2s;
-            background-color: $nav-btn-color;
+            background-color: $light;
             height: 3px;
             width: 100%;
-
+            border-radius: 2px;
         }
 
         &__row+&__row {

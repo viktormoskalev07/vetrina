@@ -18,7 +18,6 @@ $header-bgc:rgb(58, 32, 6);
 .header {
     z-index: 5;
     max-width: 100%;
-    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,20 +25,29 @@ $header-bgc:rgb(58, 32, 6);
     background-color: transparent;
     transition: 0.3s;
     // box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.253); 
+    @include nav-mobile{
+        background: $dark;
+    }
     &__content {
         flex-wrap: wrap;  
         padding: 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include nav-mobile{
+            padding: 10px 0;
+        }
     } 
     &__logo {
-        width: 50px;
+        width: 188px;
         img {
             object-fit: contain;
             width: 100%;
             height: auto;
         } 
+        @include nav-mobile{
+            width: 150px;
+        }
     } 
     &__bottom{ 
         position: absolute; 
@@ -65,7 +73,7 @@ $header-bgc:rgb(58, 32, 6);
         @include nav-mobile{
             position: fixed;
             animation: 0.2s openHeader   forwards linear ;
-    
+            background: #AEA1F4;
             .header{ 
                 &__top{
                     width: 100%;
@@ -80,7 +88,22 @@ $header-bgc:rgb(58, 32, 6);
                 }
             }  
         } 
-    } 
+    }
+.header-btn{
+    border-radius: 2.625rem;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    line-height: 1.125rem;
+    padding: 14px 35px;
+    color: $light;
+    transition: .3s linear;
+    cursor: pointer;
+    max-width: 200px;
+    &:hover{
+        text-decoration: none!important;
+        background: $dark;
+    }
+} 
 @keyframes openHeader {
     0%{
        bottom:calc(100% - 120px);
