@@ -1,6 +1,190 @@
-footer{
-  padding: 20px 10px 30px 10px;
-  background-color:#000;
-  color:white;
+.footer{
+  font-family: "Playfair Display";
+  padding: 40px 0px;
+  background-color:#F8FAFF;
+  color: #1C1D32;
+  @include md{
+    padding: 80px 0px 40px;
+  }
+  &__container{
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include md{
+      padding: 0 20px; 
+    }
+  }
+  &__logo{
+    max-width: 230px;
+    margin-bottom: 23px; 
+    @include md{
+      margin-bottom: 53px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__wrapper{
+    margin-bottom: 30px;
+    @include md{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__wrapper-bottom{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @include lg{
+      text-align: left;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__pages{
+    @include md{
+      width: 50%;
+    }
+  }
+  &__list{
+    display: flex;
+    font-weight: 700;
+    .list{
+      margin: 0;
+      margin-right: 32px;
+    }
+  }
+  &__item{
+    margin-bottom: 15px;
+    @include md{
+      margin-bottom: 20px;
+    }
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__info{
+    font-weight: 700;
+    @include md{
+      font-size: 18px;
+      width: 50%;
+      max-width: 440px;
+    }
+  }
+  &__social{
+    display: flex;
+    margin: 0 -5px;
+  }
+  &__wrap-social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    @include md{
+      margin-bottom: 30px;
+    }
+  }
+  &__icon{
+    cursor: pointer;
+    margin: 0 5px;
+    &:hover{
+      path{
+        fill: #8C5CFB;
+      }
+    }
+    path{
+      transition: .3s;
+    }
+  }
+  &__form{
+    .button{
+      font-size: 14px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      display: block;
+      background: #8C5CFB;
+      border: 0;
+      color: #fff;
+      padding: 12px;
+      width: 100%;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: .3s;
+      @include sm{
+        padding: 10px;
+        display: inline;
+        max-width: 130px;
+      }
+      &:hover{
+        background: #1c1d32;
+      }
+    }
+  }
+  &__input{
+    border-radius: 23px;
+    @include sm{
+      box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
+    }
+    input{
+      box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
+      border: 2px solid transparent;
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 23px;
+      margin-bottom: 10px;
+      @include sm{
+        box-shadow: none;
+        width: calc(100% - 140px);
+        padding: 16px 20px;
+        margin-bottom: 0;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:active, &:focus{
+        border: 2px solid #16172b;
+      }
+      &::placeholder{
+        color: #CCCED6;
+      }
+    }
+  }
+  &__copyright{
+    order: 1;
+    font-size: 12px;
+    font-weight: 400;
+    @include lg{
+      order: 0;
+    }
+  }
+  &__info-contact{
+    font-size: 16px;
+    font-weight: 400;
+    @include md{
+      font-size: 18px; 
+    }
+    @include lg{
+      text-align: right;
+    }
+    a{
+      display: block;
+      margin-bottom: 10px;
+      @include md{
+        margin-bottom: 20px;
+      }
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
  
