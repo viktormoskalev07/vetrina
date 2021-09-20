@@ -4,7 +4,7 @@
   padding: ($gap * 2) 0;
 
   @include lg {
-    padding: ($gap * 4) 0;
+    padding: ($gap * 4) 0 ($gap * 7);
   }
 
   &__title {
@@ -13,6 +13,14 @@
     @include lg {
       font-size: 3.125rem;
       margin-bottom: $gap * 5;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: $gap * 4;
+
+    @include lg {
+      margin-bottom: $gap * 7;
     }
   }
 
@@ -32,7 +40,7 @@
     text-align: center;
     background: #A794FA;
     background: linear-gradient(90deg, #A794FA 0%, #8C5CFB 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @include sm {
@@ -54,3 +62,5 @@
     }
   }
 }
+
+@import './_reason-testimonials';
