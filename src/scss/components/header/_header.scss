@@ -19,13 +19,13 @@ $header-bgc:rgb(58, 32, 6);
     z-index: 5;
     max-width: 100%;
     overflow: hidden;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: $header-bgc;
+    background-color: transparent;
     transition: 0.3s;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.253); 
+    // box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.253); 
     &__content {
         flex-wrap: wrap;  
         padding: 20px 0;
