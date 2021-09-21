@@ -2,12 +2,14 @@
     width: 100%;
     max-width: 980px;
     margin: 50px auto 0;
-    input[type="text"], textarea{
+    input:not([type="checkbox"]), input:not([type="radio"]), 
+    input:not([type="submit"]), textarea{
         width: 100%;
     }
-    input[type="text"], textarea, .choices .choices__inner{
+    input:not([type="checkbox"]), input:not([type="radio"]), 
+    input:not([type="submit"]), textarea, .choices .choices__inner{
         padding: 15px 33px;
-        background: $light;
+        background-color: $light;
         border: none;
         box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
         outline: none;
@@ -32,16 +34,39 @@
             width: 48%;
             max-width: 48%;
         }
+        &__list{
+            &--single{
+                padding: 0;
+            }
+            &--dropdown{
+                border: none;
+                box-shadow: 0px 3px 3px 0px rgb(0 0 0 / 30%);
+                border-radius: 0 0 25px 25px;  
+                .choices__item{
+                    padding-left: 33px;
+                }
+            }
+        }
         &.is-open{
             .choices__inner{
                 border-radius: 25px 25px 0 0;
             }
+            &.is-flipped{
+                .choices__inner{
+                    border-radius: 0 0 25px 25px;
+                }
+                .choices__list--dropdown{
+                    box-shadow: 0px -3px 3px 0px rgb(0 0 0 / 30%);
+                    border-radius: 25px 25px 0 0 ;
+                }
+            }
         }
     }
-    input[type="text"]{
+    input:not([type="checkbox"]), input:not([type="radio"]), input:not([type="submit"]){
         height: auto;
     }
-    input[type="text"], .choices .choices__inner{
+    input:not([type="checkbox"]), input:not([type="radio"]), 
+    input:not([type="submit"]), .choices .choices__inner{
         border-radius: 58px;
     }
     textarea{
@@ -102,23 +127,12 @@
             cursor: pointer;
         }
     }
-    .choices__list{
-        &--single{
-            padding: 0;
-        }
-        &--dropdown{
-            border: none;
-            box-shadow: none;
-            border-radius: 0 0 25px 25px;  
-            .choices__item{
-                padding-left: 33px;
-            }
-        }
-    }
     .wpforms-field{
         padding: 0;
+        width: 100%;
         &>.wpforms-field-row>.wpforms-field-row-block,
-        &>input[type="text"]{
+        &>input:not([type="checkbox"]), &>input:not([type="radio"]), 
+        &>input:not([type="submit"]){
             margin-bottom: 22px;
         }
         &>textarea{
@@ -126,6 +140,10 @@
         }
         &>.choices{
             margin-bottom: 56px;
+            &::after{
+                display: block!important;
+                border-color: #BBBBC2 transparent transparent transparent;
+            }
         }
         &-row{
             display: flex;
@@ -161,5 +179,17 @@
         border: 0;
         margin: 0;
         padding: 0;
+    }
+    .d-inline-form{
+        display: inline-block;
+        width: 100%;
+        @include md {
+            width: 48%;
+        }
+    }
+    .wpforms-field-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
