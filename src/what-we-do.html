@@ -1,0 +1,56 @@
+@@include('html-templates/head.html',{
+  title:'vetrina',
+  metadesc:'Vetrina - Retail cannabis consulting'
+  })
+  
+<main class="main">
+
+  <div class="we-do">
+    <div class="container">
+      <h1 class="we-do__title">What we do</h1>
+
+      <div class="we-do__wrapper">
+        @@include('./html-templates/components/_we-do-item.html',{
+          svgId:'consumer',
+          wd:'143px',
+          title:'Consumers Journey Experts',
+          txt:"Our job is to understand your target consumer and their behavioural patterns as to why they buy. Then to build a solution that works with your store layout and ecosystem ensuring the buying journey is nurtured to be most beneficial and profitable"
+        })
+        @@include('./html-templates/components/_we-do-item.html',{
+          svgId:'provide',
+          wd:'143px',
+          title:'Provide Data Driven Solutions',
+          txt:"Making data driven decisions is critical to making efficient, operationally sound, cost conscious decisions that ultimately provide what's best for the consumer. With our unique data partnerships we'll be able to give you the confidence to make game changing decisions to elevate your business."
+        })
+        @@include('./html-templates/components/_we-do-item.html',{
+          svgId:'enable',
+          wd:'165px',
+          title:'Enable Operational Excellence',
+          txt:"When a retail business is imbalanced - success can often peak quickly, plateaus and eventually decline. By focusing on our Lean Business Operations model we ensure your business achieves optimal performance and profitability."
+        })
+        @@include('./html-templates/components/_we-do-item.html',{
+          svgId:'inventory',
+          wd:'109px',
+          title:'Inventory Management & Merchandising',
+          txt:"Utilizing your historical sales data, our knowledge of the industry, seasonal and industry trends our team develops a brand specific inventory management program including merchandising all inventory in store and planning a promotional calendar."
+        })
+        @@include('./html-templates/components/_we-do-item.html',{
+          svgId:'increase',
+          wd:'143px',
+          title:'Increase Consumer Traffic & Awareness',
+          txt:"Government regulations, intense competition and slow-to-build mass acceptance for the plant and industry have made building awareness and driving traffic to your brand difficult. We have proven strategies that not only build awareness but drive consumers through the door and can help to create a loyal following."
+        })
+      </div>
+    </div>
+  </div>
+
+</main>
+
+@@include('./html-templates/footer.html',{})
+
+@@include('./html-templates/modules/we-do-sprite.html')
+</div> 
+<script src="js/main.js"> </script>
+</body>
+
+</html>
