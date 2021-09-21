@@ -10,11 +10,9 @@
   }
 
   &__title {
-    font-weight: 900;
     margin-bottom: $gap * 4;
 
     @include lg {
-      font-size: 3.125rem;
       margin-bottom: $gap * 7;
     }
   }

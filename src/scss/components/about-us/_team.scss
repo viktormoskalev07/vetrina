@@ -9,6 +9,14 @@
     padding-bottom: $gap * 10;
   }
 
+  &__title {
+    margin-bottom: $gap * 2;
+
+    @include lg {
+      margin-bottom: $gap * 4;
+    }
+  }
+
   &__item {
     &:not(:last-of-type) {
       margin-bottom: $gap * 2;
@@ -25,7 +33,7 @@
     margin: 0 auto ($gap * 2);
   }
 
-  &__title {
+  &__name {
     margin-bottom: $gap * 2;
     font-weight: 900;
 

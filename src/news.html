@@ -1,0 +1,28 @@
+@@include('html-templates/head.html',{
+  title:'vetrina',
+  metadesc:'Vetrina - Retail cannabis consulting'
+  })
+  
+<main class="main">
+
+  <div class="news">
+    <div class="container">
+      <h1 class="news__title title-60">News</h1>
+
+      <div class="row">
+        @@include('./html-templates/components/_news-item.html')
+        @@include('./html-templates/components/_news-item.html')
+        @@include('./html-templates/components/_news-item.html')
+        @@include('./html-templates/components/_news-item.html')
+      </div>
+    </div>
+  </div>
+
+</main>
+
+@@include('./html-templates/footer.html',{})
+</div> 
+<script src="js/main.js"> </script>
+</body>
+
+</html>

@@ -49,12 +49,6 @@
 
   &__title {
     margin-bottom: $gap * 2;
-    @include lg {
-      font-size: 3rem;
-    }
-    @include xxl {
-      font-size: 3.75rem;
-    }
   }
 
   &__text {

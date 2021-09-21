@@ -13,11 +13,9 @@ $borderClr:#DADCEA;
 
   &__title {
     margin-bottom: $gap * 4;
-    font-weight: 900;
 
     @include lg {
       margin-bottom: $gap * 7;
-      font-size: 3.75rem;
     }
   }
 
