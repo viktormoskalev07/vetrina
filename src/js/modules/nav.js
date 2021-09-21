@@ -7,11 +7,11 @@ function closenav() {
 function togglenav() {
   header.classList.toggle("nav-open");
   if (header.classList.contains("nav-open")) {
-    navBtn.style.marginRight = window.innerWidth - html.offsetWidth + "px";
+    // navBtn.style.marginRight = window.innerWidth - html.offsetWidth + "px";
     body.classList.add('scroll-hidden');
   } else {
     body.classList.remove('scroll-hidden');
-    navBtn.style.marginRight = "0";
+    // navBtn.style.marginRight = "0";
   }
 }
 navBtn.addEventListener("click", togglenav);

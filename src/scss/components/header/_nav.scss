@@ -25,7 +25,6 @@ $nav-hover:rgb(170, 81, 81);
         padding: 0;
         margin: 0;
         overflow: hidden;
-        gap: $gap + 5px;
         @include nav-desktop {
             display: flex;
             opacity: 1;
@@ -33,6 +32,7 @@ $nav-hover:rgb(170, 81, 81);
             pointer-events: all;
             max-height: 100%;
             overflow: visible;
+            &>li{margin-left: 20px;}
         }
     }
 

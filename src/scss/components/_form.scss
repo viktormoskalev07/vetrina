@@ -1,0 +1,165 @@
+#form-section .wpforms-container.custom-form{
+    width: 100%;
+    max-width: 980px;
+    margin: 50px auto 0;
+    input[type="text"], textarea{
+        width: 100%;
+    }
+    input[type="text"], textarea, .choices .choices__inner{
+        padding: 15px 33px;
+        background: $light;
+        border: none;
+        box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
+        outline: none;
+        font-size: 0.938rem;
+        line-height: 1.875rem;
+        color: $dark;
+        font-weight: 500;
+        font-family: $font-main;
+        &::placeholder{
+            opacity: 0.3;
+        }
+        &:focus{
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+    .choices{
+        width: 100%;
+        max-width: 100%;
+        @include md {
+            width: 48%;
+            max-width: 48%;
+        }
+        &.is-open{
+            .choices__inner{
+                border-radius: 25px 25px 0 0;
+            }
+        }
+    }
+    input[type="text"]{
+        height: auto;
+    }
+    input[type="text"], .choices .choices__inner{
+        border-radius: 58px;
+    }
+    textarea{
+        border-radius: 25px;
+        height: 195px;
+        resize: none;
+    }
+    .wpforms-field-checkbox{
+        label{
+            font-size: 0.938rem;
+            line-height: 1.875rem;
+            font-weight: 500;
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            cursor: pointer;
+            &::before{
+                content: '';
+                display: block;
+                min-width: 11px;
+                width: 11px;
+                height: 11px;
+                cursor: pointer;
+                border: 3px solid $accent;
+                border-radius: 4px;
+                position: absolute;
+                top: 5px;
+                background: none;
+                left: 0;
+            }
+        }
+        input[type="checkbox"]{
+            display: none;
+            &:checked + label::before{
+                box-shadow: inset 0 0 0 2px #ffffff;
+                background: $accent;
+            }
+        }
+    }
+    .wpforms-submit-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .wpforms-form{
+        input[type="submit"], button[type="submit"], .wpforms-page-button{
+            border-radius: 25px;
+            background: $accent;
+            color: $light;
+            padding: 18px 60px;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            min-width: 235px;
+            font-family: $font-title;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .choices__list{
+        &--single{
+            padding: 0;
+        }
+        &--dropdown{
+            border: none;
+            box-shadow: none;
+            border-radius: 0 0 25px 25px;  
+            .choices__item{
+                padding-left: 33px;
+            }
+        }
+    }
+    .wpforms-field{
+        padding: 0;
+        &>.wpforms-field-row>.wpforms-field-row-block,
+        &>input[type="text"]{
+            margin-bottom: 22px;
+        }
+        &>textarea{
+            margin-bottom: 55px;
+        }
+        &>.choices{
+            margin-bottom: 56px;
+        }
+        &-row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &::before, &::after{display: none;}
+            &-block{
+                min-width: 250px;
+                float: none;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                float: none;
+                &::before, &::after{display: none;}
+                @include md {
+                    width: 48%;
+                }
+            }
+        }
+    }
+    input.wpforms-error{
+        box-shadow: inset 0 0 0px 2px #f33;
+    }
+    label.wpforms-error{
+        padding-left: 33px;
+        margin-top: 5px;
+        text-shadow: 0 0 4px #f33;
+        color: $light;
+    }
+    ul, ul li{
+        list-style: none;
+        background: none;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
