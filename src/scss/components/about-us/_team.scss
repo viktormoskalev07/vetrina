@@ -1,0 +1,52 @@
+.team-about {
+  background-color: $black;
+  color: $light;
+  padding-top: $gap * 6;
+  padding-bottom: $gap * 6;
+
+  @include lg {
+    padding-top: $gap * 10;
+    padding-bottom: $gap * 10;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: $gap * 2;
+    }
+    @include md {
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 300px;
+    margin: 0 auto ($gap * 2);
+  }
+
+  &__title {
+    margin-bottom: $gap * 2;
+    font-weight: 900;
+
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+
+  &__position {
+    margin-bottom: $gap * 2;
+    font-size: 1.125rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.125rem;
+    opacity: .5;
+    line-height: 1.2;
+  }
+}
