@@ -3,14 +3,18 @@
 --secondary :#AD9EFB;
 --accent: #FB9291;
 --dark: #1C1D32;
+--black: #1D2226;
 --light: #ffffff;
+--bg-light: #AEA1F4;
 } 
 
 $primary :var(--primary);
 $secondary:var(--secondary);
 $accent:var(--accent);
 $dark:var(--dark);
+$black:var(--black);
 $light:var(--light);
+$bg-light:var(--bg-light);
 $gap: 15px;
 $logowidth:50px;
 

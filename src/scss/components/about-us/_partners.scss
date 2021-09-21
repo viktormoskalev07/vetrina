@@ -1,0 +1,36 @@
+.partners-about {
+  padding-top: $gap * 4;
+  padding-bottom: $gap * 2;
+  background-color: $bg-light;
+  color: $light;
+
+  @include lg {
+    padding-top: $gap * 7;
+    padding-bottom: $gap * 9;
+  }
+
+  &__title {
+    font-weight: 900;
+    margin-bottom: $gap * 4;
+
+    @include lg {
+      font-size: 3.125rem;
+      margin-bottom: $gap * 7;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $gap * 3;
+
+    @include lg {
+      margin-bottom: $gap * 4;
+    }
+
+    img {
+      max-width: 270px;
+    }
+  }
+}
