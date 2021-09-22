@@ -109,13 +109,10 @@ $nav-hover:rgb(170, 81, 81);
     &__btn {
         background-color: transparent;
         border: none;
-        width: 50px;
+        width: 50px; 
         cursor: pointer;
         height: 50px;
-        z-index: 10;
-        position: absolute;
-        right: 10px;
-        top: 2px;
+        z-index: 10; 
         padding: 10px;
         justify-content: center;
         align-items: center;

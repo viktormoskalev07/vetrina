@@ -15,11 +15,17 @@ $header-bgc:rgb(58, 32, 6);
         overflow: hidden;
     }
 }
+.promobar{
+    text-align: center;
+    padding: 10px;
+    background-color:  #A05BFA;
+    color:white;
+}
 .header {
     z-index: 5;
     max-width: 100%;
     position: fixed;
-    top: 0;
+    top:0px;
     left: 0;
     right: 0;
     background-color: transparent;
@@ -36,8 +42,18 @@ $header-bgc:rgb(58, 32, 6);
             padding: 10px 0;
         }
     } 
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include lg{
+            width: auto;
+            display: inline-block;
+        }
+    }
     &__logo {
         width: 188px;
+        margin-bottom: 5px;
         img {
             object-fit: contain;
             width: 100%;
