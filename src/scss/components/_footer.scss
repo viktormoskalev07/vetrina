@@ -131,10 +131,12 @@
   }
   &__input{
     border-radius: 23px;
+    background: #fff;
     @include sm{
       box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
     }
     input{
+      background: #fff;
       box-shadow: 0px 0px 35px rgba(71, 79, 181, 0.05);
       border: 2px solid transparent;
       width: 100%;
@@ -169,6 +171,9 @@
   &__info-contact{
     font-size: 16px;
     font-weight: 400;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     @include md{
       font-size: 18px; 
     }
@@ -176,7 +181,7 @@
       text-align: right;
     }
     a{
-      display: block;
+      display: inline;
       margin-bottom: 10px;
       @include md{
         margin-bottom: 20px;
