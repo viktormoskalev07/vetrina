@@ -55,8 +55,7 @@ $bubble-clr: #DADCEA;
     font-family: $font-title;
     font-weight: 700;
     font-size: 1.25rem;
-
-    @include lg {
+    @include xxl{
       font-size: 1.5rem;
     }
   }
